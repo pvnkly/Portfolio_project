@@ -88,7 +88,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #75d0fd;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -118,7 +118,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #75d0fd;
+    background-color: #7dcff6;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -399,4 +399,107 @@ html {
 [data-aos="slide-left"].aos-animate {
     opacity: 1;
     transform: translateX(0); /* Move back to its final position */
+}
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    /* Hero Section */
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-container {
+        max-width: 90%;
+        margin: 0;
+    }
+
+    .hero-container h1 {
+        font-size: 2.5rem; /* Adjust heading size on mobile */
+    }
+
+    .hero-container p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    /* Profile Picture */
+    .circle {
+        position: static;
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Navigation */
+    nav ul li {
+        margin: 0 10px; /* Adjust spacing for mobile navigation */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Slightly smaller font size */
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        flex-direction: column;
+        gap: 10px; /* Increase gap between skills */
+    }
+
+    .skill-rect {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    /* Projects Section */
+    #projects .projects-grid {
+        grid-template-columns: 1fr; /* One column layout for projects on mobile */
+        gap: 20px;
+    }
+
+    #projects .project-card {
+        max-width: 100%; /* Full width on mobile */
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    #contact .contact-info {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.2rem; /* Adjust icon size */
+    }
+}
+
+/* Very Small Screen Adjustments (like smartphones) */
+@media (max-width: 480px) {
+    /* Further scale-down for tiny screens */
+    .hero-container h1 {
+        font-size: 2rem;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .skill-rect {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    #projects .project-card {
+        margin-bottom: 15px;
+    }
+
+    #contact .contact-info a i {
+        font-size: 1.8rem; /* Smaller icons */
+    }
 }
