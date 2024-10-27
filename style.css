@@ -120,7 +120,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #7dcff6;
+    background-color: #333;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -299,6 +299,7 @@ nav ul li a:hover {
     margin-bottom: 20px;  /* Add some spacing below the heading */
     color: #ff6347;  /* Set color */
 }
+
 #contact .contact-info {
     display: flex;
     justify-content: center;
@@ -311,6 +312,32 @@ nav ul li a:hover {
     color: #333;  /* Default color for the icons */
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
+    position: relative; /* For tooltip positioning */
+}
+
+/* Tooltip text */
+#contact .contact-info a::after {
+    content: attr(title); /* Use title attribute as tooltip text */
+    position: absolute;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+/* Show tooltip on hover */
+#contact .contact-info a:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 #contact .contact-info a:hover {
@@ -322,6 +349,7 @@ nav ul li a:hover {
 #contact .contact-info a i {
     font-size: 2rem;  /* Adjust this for desired icon size */
 }
+
 
 /* Footer */
 footer {
