@@ -17,7 +17,7 @@ body {
 
 /* Hero Section */
 #hero {
-    height: 100vh;
+    min-height: 100vh; /* Allows flexibility based on content */
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: space-between;
@@ -25,6 +25,7 @@ body {
     color: white;
     text-align: left;
     position: relative;
+    padding-bottom: 80px; /* Adds space to prevent overlap */
 }
 
 #hero::before {
@@ -40,27 +41,28 @@ body {
 
 .hero-container {
     z-index: 2;
-    max-width: 70%; /* Increase the max-width to use more space */
-    margin-left: 0.5in; /* Keep the 0.5 inch space on the left */
+    max-width: 70%;
+    margin-left: 0.5in;
+    margin-bottom: 60px; /* Adds space between text and curved section */
 }
 
 .hero-container h1 {
-    font-size: 6rem; /* Increase the size to make it big */
+    font-size: 6rem;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
 .hero-container p {
-    font-size: 1.25rem; /* Reduce the paragraph font size slightly */
-    line-height: 1.7; /* Adjust the line height for better readability */
-    margin-bottom: 20px; /* Add some space between paragraphs */
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-
+/* Circle Profile Picture */
 .circle {
     position: absolute;
-    top: 1.5in;  /* 1.5 inch from top */
-    right: 1in;  /* 1 inch from right */
+    top: 1.5in;
+    right: 1in;
     width: 260px;
     height: 260px;
     border-radius: 50%;
@@ -85,8 +87,9 @@ body {
     height: 150px;
     background-color: white;
     border-radius: 100% 100% 0 0;
-    z-index: 2;
+    z-index: 1;
 }
+
 
 /* Footer */
 footer {
