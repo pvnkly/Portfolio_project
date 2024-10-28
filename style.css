@@ -17,7 +17,7 @@ body {
 
 /* Hero Section */
 #hero {
-    min-height: 100vh; /* Allows flexibility based on content */
+    height: 100vh;
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,6 @@ body {
     color: white;
     text-align: left;
     position: relative;
-    padding-bottom: 80px; /* Adds space to prevent overlap */
 }
 
 #hero::before {
@@ -41,28 +40,27 @@ body {
 
 .hero-container {
     z-index: 2;
-    max-width: 70%;
-    margin-left: 0.5in;
-    margin-bottom: 60px; /* Adds space between text and curved section */
+    max-width: 70%; /* Increase the max-width to use more space */
+    margin-left: 0.5in; /* Keep the 0.5 inch space on the left */
 }
 
 .hero-container h1 {
-    font-size: 6rem;
+    font-size: 6rem; /* Increase the size to make it big */
     font-weight: 400;
     margin-bottom: 20px;
 }
 
 .hero-container p {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    font-size: 1.25rem; /* Reduce the paragraph font size slightly */
+    line-height: 1.7; /* Adjust the line height for better readability */
+    margin-bottom: 20px; /* Add some space between paragraphs */
 }
 
-/* Circle Profile Picture */
+
 .circle {
     position: absolute;
-    top: 1.5in;
-    right: 1in;
+    top: 1.5in;  /* 1.5 inch from top */
+    right: 1in;  /* 1 inch from right */
     width: 260px;
     height: 260px;
     border-radius: 50%;
@@ -77,20 +75,6 @@ body {
     object-fit: cover;
     opacity: 1;
 }
-
-/* Curved Bottom Section */
-.curved-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background-color: white;
-    border-radius: 100% 100% 0 0;
-    z-index: 1;
-}
-
-
 /* Footer */
 footer {
     background-color: #333;
